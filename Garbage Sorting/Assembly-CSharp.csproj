@@ -45,8 +45,10 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\Script\Player.cs" />
-     <Compile Include="Assets\Script\Trash_Can.cs" />
+     <Compile Include="Assets\Script\Camera\CameraFollow.cs" />
+     <Compile Include="Assets\Script\Item\Trash_Can.cs" />
+     <Compile Include="Assets\Script\Menu\Menu_button.cs" />
+     <Compile Include="Assets\Script\Player\Player.cs" />
  <Reference Include="UnityEngine">
  <HintPath>E:/MyGameMaker/UnityE/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
  </Reference>
