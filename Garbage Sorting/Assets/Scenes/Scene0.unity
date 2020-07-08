@@ -2008,35 +2008,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 198799511, guid: 5045644380b993b4b9ffde663fdab07d, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -106
-      objectReference: {fileID: 0}
     - target: {fileID: 814898980, guid: 5045644380b993b4b9ffde663fdab07d, type: 3}
       propertyPath: m_IsActive
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1609014079, guid: 5045644380b993b4b9ffde663fdab07d, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1637193885, guid: 5045644380b993b4b9ffde663fdab07d, type: 3}
-      propertyPath: m_Text
-      value: MainMenu
-      objectReference: {fileID: 0}
-    - target: {fileID: 2049912243, guid: 5045644380b993b4b9ffde663fdab07d, type: 3}
-      propertyPath: m_Text
-      value: RESUM
       objectReference: {fileID: 0}
     - target: {fileID: 6291030547677800657, guid: 5045644380b993b4b9ffde663fdab07d,
         type: 3}
       propertyPath: m_Name
       value: Canvas
-      objectReference: {fileID: 0}
-    - target: {fileID: 6291030547677800657, guid: 5045644380b993b4b9ffde663fdab07d,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6291030547677800661, guid: 5045644380b993b4b9ffde663fdab07d,
         type: 3}
@@ -2141,6 +2120,11 @@ PrefabInstance:
     - target: {fileID: 6291030547677800661, guid: 5045644380b993b4b9ffde663fdab07d,
         type: 3}
       propertyPath: m_Pivot.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6291030548026742504, guid: 5045644380b993b4b9ffde663fdab07d,
+        type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
