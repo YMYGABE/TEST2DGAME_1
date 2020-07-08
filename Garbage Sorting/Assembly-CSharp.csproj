@@ -46,6 +46,7 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\Script\Camera\CameraFollow.cs" />
+     <Compile Include="Assets\Script\Item\PickUP.cs" />
      <Compile Include="Assets\Script\Item\Trash_Can.cs" />
      <Compile Include="Assets\Script\Menu\Menu_button.cs" />
      <Compile Include="Assets\Script\Menu\PauseMenu.cs" />
