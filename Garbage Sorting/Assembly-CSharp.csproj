@@ -45,6 +45,9 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
+     <Compile Include="Assets\Script\Bag\BagMenu.cs" />
+     <Compile Include="Assets\Script\Bag\Inventory.cs" />
+     <Compile Include="Assets\Script\Bag\item.cs" />
      <Compile Include="Assets\Script\Camera\CameraFollow.cs" />
      <Compile Include="Assets\Script\Item\PickUP.cs" />
      <Compile Include="Assets\Script\Item\Trash_Can.cs" />
