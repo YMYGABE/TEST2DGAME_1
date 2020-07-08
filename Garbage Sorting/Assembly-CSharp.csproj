@@ -51,6 +51,7 @@
      <Compile Include="Assets\Script\Menu\Menu_button.cs" />
      <Compile Include="Assets\Script\Menu\PauseMenu.cs" />
      <Compile Include="Assets\Script\Player\Player.cs" />
+     <Compile Include="Assets\Script\Player\Player_controller.cs" />
  <Reference Include="UnityEngine">
  <HintPath>E:/MyGameMaker/UnityE/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
  </Reference>
