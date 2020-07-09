@@ -4,5 +4,5 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "New Inventory",menuName = "Inventory/New Inventory")]
 public class Inventory : ScriptableObject
 {
-   List<item> Items = new List<item>();
+   public List<item> Items = new List<item>();   //存放物品信息的数据库
 }
