@@ -15,9 +15,15 @@ public class itemOnWorld : MonoBehaviour
     }
     public void AddItem(){   // 添加物品
         if(!this_Inventory.Items.Contains(this_Item)){      //数量不为0时添加
-            this_Inventory.Items.Add(this_Item);
+            // this_Inventory.Items.Add(this_Item);
             // InventoryManager.CreatNewItem(this_Item);
-            Debug.Log("挂载了吗？？");
+            // Debug.Log("挂载了吗？？");
+            for(int i = 0;i < this_Inventory.Items.Count;i++){
+                if(this_Inventory.Items[i] == null){
+                    this_Inventory.Items[i] = this_Item;
+                    break;
+                }
+            }
         }else{   //否则数量增加
             this_Item.ItemNum++;
         }
