@@ -57,6 +57,7 @@ public class InventoryManager : MonoBehaviour
             // CreatNewItem(instance.Bag.Items[i]);
             instance.slots.Add(Instantiate(instance.EmptySlots));   //生成空栏位，并存储到列表里，方便后面调用
             instance.slots[i].transform.SetParent(instance.slotGrid.transform);    //挂载到Grid下面
+            instance.slots[i].GetComponent<Slot>().ID = i;
             instance.slots[i].GetComponent<Slot>().setupSlot(instance.Bag.Items[i]);   //调用Slot里的方法
         }
     }

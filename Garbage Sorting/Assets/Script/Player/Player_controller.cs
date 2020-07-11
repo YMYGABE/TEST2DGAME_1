@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class Player_controller : MonoBehaviour
 {
+    public static Player_controller play;
     public float speed;
     public Animator PlayerAnim;
     public Rigidbody2D PlayerRig;
     public Vector2 PlayerMoveMent;
-
+   
     // Start is called before the first frame update
     void Start()
     {
@@ -35,5 +36,9 @@ public class Player_controller : MonoBehaviour
             PlayerAnim.SetFloat("VY",PlayerMoveMent.y);   //获取玩家y轴上的变量
         }
         PlayerAnim.SetFloat("Run",PlayerMoveMent.magnitude);   //这个计算的是（x^2+y^2）^2,反正肯定 >= 0，只要动了，就切换ANIMATOR
+    }
+    public static void Drop(int ID,Inventory MyBag)
+    {
+        Instantiate(MyBag.Items[ID].ItemImage,play.PlayerRig.position,Quaternion.identity);
     }
 }

@@ -4804,6 +4804,7 @@ GameObject:
   - component: {fileID: 1108232767}
   - component: {fileID: 1108232766}
   - component: {fileID: 1108232770}
+  - component: {fileID: 1108232771}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -4904,6 +4905,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Bag_Menu: {fileID: 1833877077}
+--- !u!114 &1108232771
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1108232765}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9721b0045eb43bc41a489eb9bbd74395, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Bag: {fileID: 11400000, guid: fdf2ba92f94004340bd8f477b1f4de99, type: 2}
+  slotGrid: {fileID: 1070409340}
+  EmptySlots: {fileID: 6579858175712332330, guid: bc6fe1f25ef5de5489497e1ff87f97c7,
+    type: 3}
+  itemInfromation: {fileID: 756336898}
+  slots: []
 --- !u!1 &1399900008
 GameObject:
   m_ObjectHideFlags: 0
@@ -5361,7 +5380,6 @@ GameObject:
   - component: {fileID: 1833877078}
   - component: {fileID: 1833877080}
   - component: {fileID: 1833877079}
-  - component: {fileID: 1833877081}
   m_Layer: 5
   m_Name: Bag
   m_TagString: Untagged
@@ -5428,21 +5446,3 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1833877077}
   m_CullTransparentMesh: 0
---- !u!114 &1833877081
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1833877077}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9721b0045eb43bc41a489eb9bbd74395, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Bag: {fileID: 11400000, guid: fdf2ba92f94004340bd8f477b1f4de99, type: 2}
-  slotGrid: {fileID: 1070409340}
-  EmptySlots: {fileID: 6579858175712332330, guid: bc6fe1f25ef5de5489497e1ff87f97c7,
-    type: 3}
-  itemInfromation: {fileID: 756336898}
-  slots: []
