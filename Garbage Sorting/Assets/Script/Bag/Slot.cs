@@ -12,8 +12,10 @@ public class Slot : MonoBehaviour
     public void onclick(){
         InventoryManager.UpdateItemInfo(slotinfor);
     }
-    public void setupSlot(item item){
-        if(item == null){
+    public void setupSlot(item item)
+    {
+        if(item == null)
+        {
             iteminslot.SetActive(false);
             return;
         }
