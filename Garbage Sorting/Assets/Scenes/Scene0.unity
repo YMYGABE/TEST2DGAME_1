@@ -2489,7 +2489,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Bag: {fileID: 11400000, guid: 90014292d32df3e4fb8769e6072823bb, type: 2}
   slotGrid: {fileID: 669888}
-  EmptySlots: {fileID: 8369225007146387486, guid: c4cae706a90f84b43a019c2d9150cb1b,
+  EmptySlots: {fileID: 6579858175712332330, guid: bc6fe1f25ef5de5489497e1ff87f97c7,
     type: 3}
   itemInfromation: {fileID: 283820762}
   slots: []

@@ -24,7 +24,7 @@ public class ItemOnDrag : MonoBehaviour,IBeginDragHandler,IDragHandler,IEndDragH
     public void OnDrag(PointerEventData eventData)  //拖拽中
     {
         transform.position = eventData.position;
-        // Debug.Log(eventData.pointerCurrentRaycast.gameObject.name);
+        Debug.Log(eventData.pointerCurrentRaycast.gameObject.name);
     }
 
     public void OnEndDrag(PointerEventData eventData)
@@ -76,10 +76,10 @@ public class ItemOnDrag : MonoBehaviour,IBeginDragHandler,IDragHandler,IEndDragH
             GetComponent<CanvasGroup>().blocksRaycasts = true;
         }
 
-            Player_controller.Drop(originID,MyBag);
-            MyBag.Items[originID] = null;
-            GetComponent<CanvasGroup>().blocksRaycasts = true;
-            return;
+            // Player_controller.Drop(originID,MyBag);
+            // MyBag.Items[originID] = null;
+            // GetComponent<CanvasGroup>().blocksRaycasts = true;
+            // return;
           
     }
 

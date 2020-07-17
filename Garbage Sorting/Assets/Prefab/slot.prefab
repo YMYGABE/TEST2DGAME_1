@@ -192,6 +192,7 @@ MonoBehaviour:
   originParent: {fileID: 0}
   originID: 0
   MyBag: {fileID: 11400000, guid: fdf2ba92f94004340bd8f477b1f4de99, type: 2}
+  DPosition: {fileID: 0}
 --- !u!225 &3493208015291476492
 CanvasGroup:
   m_ObjectHideFlags: 0
