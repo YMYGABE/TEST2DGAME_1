@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class TrashOnD : MonoBehaviour,IBeginDragHandler,IDragHandler,IEndDragHandler
+public class TrashOnD : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
     public Inventory Bag;
     public Transform originParent;
@@ -14,25 +14,25 @@ public class TrashOnD : MonoBehaviour,IBeginDragHandler,IDragHandler,IEndDragHan
         originID = originParent.GetComponent<Slot>().ID;
         transform.SetParent(originParent.parent);   //在把物体拖出来的时候改变父级,防止遮挡
         transform.position = eventData.position;  //让物体位置随着鼠标改变
-        
+
         GetComponent<CanvasGroup>().blocksRaycasts = false;
     }
 
     public void OnDrag(PointerEventData eventData)
     {
         transform.position = eventData.position;
-        Debug.Log(eventData.pointerCurrentRaycast.gameObject.name);
+        //Debug.Log(eventData.pointerCurrentRaycast.gameObject.name);
     }
 
     public void OnEndDrag(PointerEventData eventData)
     {
-        if(eventData.pointerCurrentRaycast.gameObject != null)
+        if (eventData.pointerCurrentRaycast.gameObject != null)
         {
-            if(eventData.pointerCurrentRaycast.gameObject.name == "Slot_2(Clone)")
+            if (eventData.pointerCurrentRaycast.gameObject.name == "Slot_2(Clone)")
             {
                 transform.SetParent(eventData.pointerCurrentRaycast.gameObject.transform);
                 transform.position = eventData.pointerCurrentRaycast.gameObject.transform.position;
-                if(Bag.Items[originID] == Bag.Items[eventData.pointerPressRaycast.gameObject.GetComponent<Slot>().ID])
+                if (Bag.Items[originID] == Bag.Items[eventData.pointerPressRaycast.gameObject.GetComponent<Slot>().ID])
                 {
                     Bag.Items[eventData.pointerCurrentRaycast.gameObject.GetComponent<Slot>().ID] = Bag.Items[originID];
                 }
@@ -44,7 +44,7 @@ public class TrashOnD : MonoBehaviour,IBeginDragHandler,IDragHandler,IEndDragHan
                 GetComponent<CanvasGroup>().blocksRaycasts = true;
                 return;
             }
-            if(eventData.pointerCurrentRaycast.gameObject.name == "Image")
+            if (eventData.pointerCurrentRaycast.gameObject.name == "Image")
             {
                 transform.SetParent(eventData.pointerCurrentRaycast.gameObject.transform.parent.parent);
                 transform.position = eventData.pointerCurrentRaycast.gameObject.transform.parent.parent.position;
@@ -60,5 +60,15 @@ public class TrashOnD : MonoBehaviour,IBeginDragHandler,IDragHandler,IEndDragHan
                 return;
             }
         }
+
+        if (Trash_Can.HaveCatch)
+        {
+            Destroy(transform);
+            Bag.Items[originID] = null;
+        }
+        Destroy(transform);
+        //    GetComponent<CanvasGroup>().blocksRaycasts = true;
+        //    return;
+
     }
 }

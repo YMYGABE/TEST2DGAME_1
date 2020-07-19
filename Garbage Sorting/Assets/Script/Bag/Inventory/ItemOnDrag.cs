@@ -2,12 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 public class ItemOnDrag : MonoBehaviour,IBeginDragHandler,IDragHandler,IEndDragHandler
 {   //在这里我们要实现鼠标拖拽的接口
     public Transform originParent;  //用这个来记录拖拽物体的原始父级
     public int originID;
     public Inventory MyBag;
     public Transform DPosition;
+    public LayoutElement layout;
     public void OnBeginDrag(PointerEventData eventData)   //开始拖拽
     {
         
@@ -24,7 +26,7 @@ public class ItemOnDrag : MonoBehaviour,IBeginDragHandler,IDragHandler,IEndDragH
     public void OnDrag(PointerEventData eventData)  //拖拽中
     {
         transform.position = eventData.position;
-        Debug.Log(eventData.pointerCurrentRaycast.gameObject.name);
+        //Debug.Log(eventData.pointerCurrentRaycast.gameObject.name);
     }
 
     public void OnEndDrag(PointerEventData eventData)
@@ -76,11 +78,20 @@ public class ItemOnDrag : MonoBehaviour,IBeginDragHandler,IDragHandler,IEndDragH
             GetComponent<CanvasGroup>().blocksRaycasts = true;
         }
 
-            // Player_controller.Drop(originID,MyBag);
-            // MyBag.Items[originID] = null;
-            // GetComponent<CanvasGroup>().blocksRaycasts = true;
-            // return;
-          
+       
+        if (Trash_Can.HaveCatch)
+        {
+            Trash_Can.TrashHave = true;
+            //layout.SetActive(false);
+            Destroy(transform.gameObject);
+            MyBag.Items[originID] = null;
+            GetComponent<CanvasGroup>().blocksRaycasts = true;
+            return;
+        }
+        transform.SetParent(originParent);
+        transform.position = originParent.position;
+        GetComponent<CanvasGroup>().blocksRaycasts = true;
+
     }
 
 }

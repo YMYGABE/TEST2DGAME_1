@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Trash_Can : MonoBehaviour
 {
-    private bool TrashHave;
-    private bool HaveCatch;
+    public static bool TrashHave;
+    public static bool HaveCatch;
 
     public float Waittime;  //等待时间
     public Animator TrashAnim;

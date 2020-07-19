@@ -12,6 +12,10 @@ public class Slot : MonoBehaviour
     public string slotinfor;
     public void onclick(){
         InventoryManager.UpdateItemInfo(slotinfor);
+        if (Trash_Can.HaveCatch)
+        {
+            Destroy(slotitem);
+        }
     }
     public void setupSlot(item item)
     {
