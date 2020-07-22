@@ -20,8 +20,8 @@ public class Trash_Can : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.E) && HaveCatch){   //若摁下E的时候同时检测到碰撞才会调用
-            TrashHave = true;
+        if(HaveCatch){   //若摁下E的时候同时检测到碰撞才会调用
+            //TrashHave = true;
            StartCoroutine(FinishTrash());   //调用协程
         //    Debug.Log(TrashHave);
         }

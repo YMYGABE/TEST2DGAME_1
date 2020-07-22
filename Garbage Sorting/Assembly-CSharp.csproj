@@ -71,6 +71,7 @@
     <Compile Include="Assets\Script\Bag\items\item.cs" />
     <Compile Include="Assets\Script\Camera\CameraFollow.cs" />
     <Compile Include="Assets\Script\Game\SaveGame.cs" />
+    <Compile Include="Assets\Script\Item\Collection.cs" />
     <Compile Include="Assets\Script\Item\PickUP.cs" />
     <Compile Include="Assets\Script\Item\TrashOnD.cs" />
     <Compile Include="Assets\Script\Item\Trash_Can.cs" />
@@ -79,6 +80,9 @@
     <Compile Include="Assets\Script\Menu\PauseMenu.cs" />
     <Compile Include="Assets\Script\Player\Player.cs" />
     <Compile Include="Assets\Script\Player\Player_controller.cs" />
+    <None Include="Assets\LoopAndMusicFree\_readme\readme_en_ver2.0.txt" />
+    <None Include="Assets\CasualGameBGM05\ReadMe.txt" />
+    <None Include="Assets\LoopAndMusicFree\_readme\readme_jp_ver2.0.txt" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>E:/MyGameMaker/2dgame_2/Garbage Sorting/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
