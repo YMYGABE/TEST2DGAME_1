@@ -4,10 +4,13 @@ using UnityEngine;
 
 public class Trash_Can : MonoBehaviour
 {
-    private bool TrashHave;
-    private bool HaveCatch;
+    [Header("判断是否有垃圾和有垃圾桶")]
+    public static bool TrashHave;
+    public static bool HaveCatch;
 
+    [Header("等待时间")]
     public float Waittime;  //等待时间
+    [Header("切换的状态")]
     public Animator TrashAnim;
     // Start is called before the first frame update
     void Start()
@@ -20,8 +23,8 @@ public class Trash_Can : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.E) && HaveCatch){   //若摁下E的时候同时检测到碰撞才会调用
-            TrashHave = true;
+        if(HaveCatch){   //若摁下E的时候同时检测到碰撞才会调用
+            //TrashHave = true;
            StartCoroutine(FinishTrash());   //调用协程
         //    Debug.Log(TrashHave);
         }
