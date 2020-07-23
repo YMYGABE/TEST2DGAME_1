@@ -4,10 +4,13 @@ using UnityEngine;
 
 public class Trash_Can : MonoBehaviour
 {
+    [Header("判断是否有垃圾和有垃圾桶")]
     public static bool TrashHave;
     public static bool HaveCatch;
 
+    [Header("等待时间")]
     public float Waittime;  //等待时间
+    [Header("切换的状态")]
     public Animator TrashAnim;
     // Start is called before the first frame update
     void Start()

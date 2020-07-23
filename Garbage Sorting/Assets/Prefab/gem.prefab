@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3774958434268624350}
   - component: {fileID: 3774958434268624346}
   - component: {fileID: 3774958434268624347}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: gem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
