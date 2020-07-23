@@ -1,4 +1,2 @@
-Base path: 'E:/MyGameMaker/UnityE/Unity/Editor/Data', plugins path 'E:/MyGameMaker/UnityE/Unity/Editor/Data/PlaybackEngines'
+Base path: 'F:/Unity/Editor/Data', plugins path 'F:/Unity/Editor/Data/PlaybackEngines'
 Cmd: initializeCompiler
-
-Quitting shader compiler process
